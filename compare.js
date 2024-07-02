@@ -16,11 +16,11 @@ function calculatePercentageDifference(obj1, obj2) {
     if (key in obj1 && key in obj2) {
       if (!deepEqual(obj1[key], obj2[key])) {
         console.log(obj1[key] + " is equal " );
-        differingKeys++;
+        differingKeys=differingKeys+1;
       }
     } else {
         console.log(key + " is not equal " );
-      differingKeys++;
+      differingKeys=differingKeys+1;
     }
   });
 
@@ -33,4 +33,4 @@ function calculatePercentageDifference(obj1, obj2) {
   
   
   const percentageDifference = calculatePercentageDifference(jsonArray1[0], jsonArray2[0]);
-  console.log(`Percentage Difference: ${percentageDifference}%`);
+  console.log(`Percentage Difference: ${percentageDifference} %`);
